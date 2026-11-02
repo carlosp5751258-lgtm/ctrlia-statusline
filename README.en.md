@@ -2,6 +2,8 @@
 
 [Leer en español](README.md)
 
+The Spanish version is in the repository root and in [README.md](README.md); the English files are in `en/`.
+
 A Python status line for Claude Code with no dependencies (no `jq` needed): model, folder and git branch, colored context percentage, usage of the 5-hour and 7-day limits (Pro, Max and Ultra plans) and the session's estimated cost.
 
 ```text
@@ -17,21 +19,21 @@ The full explanation (when it runs, which fields arrive, why `/context` shows mo
 
 | File | What for |
 | --- | --- |
-| `statusline.py` | The status line script (Python 3, standard library only) |
-| `settings.ejemplo.json` | The `statusLine` block for `~/.claude/settings.json` |
-| `settings.jq.ejemplo.json` | The one-line alternative from the official docs (requires `jq`) |
-| `probar.sh` | Tests the script with mock data, without opening Claude Code (messages in Spanish) |
+| `en/statusline.py` | The status line script (Python 3, standard library only) |
+| `en/settings.ejemplo.json` | The `statusLine` block for `~/.claude/settings.json` |
+| `en/settings.jq.ejemplo.json` | The one-line alternative from the official docs (requires `jq`) |
+| `en/probar.sh` | Tests the script with mock data, without opening Claude Code |
 
 ## How to use it
 
 ```bash
 git clone https://github.com/carlosp5751258-lgtm/ctrlia-statusline.git
-cp ctrlia-statusline/statusline.py ~/.claude/statusline.py
+cp ctrlia-statusline/en/statusline.py ~/.claude/statusline.py
 chmod +x ~/.claude/statusline.py
-./ctrlia-statusline/probar.sh ~/.claude/statusline.py
+./ctrlia-statusline/en/probar.sh ~/.claude/statusline.py
 ```
 
-Then add the block from `settings.ejemplo.json` to `~/.claude/settings.json` (if you already have other keys, merge only `statusLine`, don't replace the file). Claude Code reloads the settings by itself.
+Then add the block from `en/settings.ejemplo.json` to `~/.claude/settings.json` (if you already have other keys, merge only `statusLine`, don't replace the file). Claude Code reloads the settings by itself.
 
 If the bar doesn't show: accept workspace trust for the folder, check `chmod +x` and start with `claude --debug-file /tmp/claude-debug.log` to see the script's stderr and exit code.
 
@@ -44,4 +46,4 @@ With Claude Code **2.1.316**, Python 3.12.3 and Linux: `probar.sh` passes with f
 MIT. See [LICENSE](LICENSE).
 
 ---
-Part of **[Ctrl+IA](https://ctrlia.dev/)**: code with Claude Code like a pro, in Spanish. Made by Carlos P.
+Part of **[Ctrl+IA](https://ctrlia.dev/)**: code with Claude Code like a pro. Made by Carlos P.

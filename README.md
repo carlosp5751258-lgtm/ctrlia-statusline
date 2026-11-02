@@ -2,6 +2,8 @@
 
 [Read in English](README.en.md)
 
+English version: [README.en.md](README.en.md) (archivos en `en/`).
+
 Una barra de estado para Claude Code en Python, sin dependencias (no necesita `jq`): modelo, carpeta y rama de git, porcentaje de contexto con color, uso de los límites de 5 h y 7 días (planes Pro, Max y Ultra) y coste estimado de la sesión.
 
 ```text
